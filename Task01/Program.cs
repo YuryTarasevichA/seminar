@@ -12,9 +12,9 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 if (number1 == number2 * number2)
 {
-    Console.WriteLine ($"Ура число {number1} является квадратом второго числа");
+    Console.WriteLine($"Ура число {number1} является квадратом второго числа");
 }
 else
 {
-    Console.WriteLine ($"Число 1 не является квадратом второго числа");
+    Console.WriteLine($"Число 1 не является квадратом второго числа");
 }
