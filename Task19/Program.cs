@@ -6,23 +6,31 @@
 
 Console.WriteLine("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int result = ReverseNumber(num);
-int ReverseNumber(int number)
+if (9999 < num && num < 1000000)
 {
-    int reversed = 0;
-    while (number > 0)
+    int result = ReverseNumber(num);
+    int ReverseNumber(int number)
     {
-        int digit = number % 10;
-        reversed = reversed * 10 + digit;
-        number /= 10;
+        int reversed = 0;
+        while (number > 0)
+        {
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+            number /= 10;
+        }
+        return reversed;
     }
-    return reversed;
-}
-if (result == num)
-{
-    Console.WriteLine("Это пятизначное число является палиндромом");
+    if (result == num)
+    {
+        Console.WriteLine("Это пятизначное число является палиндромом");
+    }
+    else
+    {
+        Console.WriteLine("Это пятизначное число не является палиндромом");
+    }
 }
 else
 {
-    Console.WriteLine("Это пятизначное число не является палиндромом");
+    Console.WriteLine("Это число не является пятизначным");
 }
+
