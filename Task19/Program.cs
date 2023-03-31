@@ -6,7 +6,7 @@
 
 Console.WriteLine("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-if (9999 < num && num < 1000000)
+if (9999 < num && num < 100000)
 {
     int result = ReverseNumber(num);
     int ReverseNumber(int number)
