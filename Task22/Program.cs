@@ -10,12 +10,12 @@
 
 string Table(int Num)
 {
-    string tableResult = "______________________\n";//string.Empty
+    string tableResult = "_____________________\n";//string.Empty
     for (int i = 0; i < Num; i++)
     {
         tableResult = tableResult + $"|{i, 4}     | {i*i, 4}    | \n";
     }
-    tableResult = tableResult+ "-------------------------";
+    tableResult = tableResult+ "-----------------------";
     return tableResult;
 
 }
