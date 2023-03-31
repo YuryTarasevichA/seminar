@@ -11,7 +11,7 @@
 string Table(int Num)
 {
     string tableResult = "_____________________\n";//string.Empty
-    for (int i = 0; i < Num; i++)
+    for (int i = 1; i <= Num; i++)
     {
         tableResult = tableResult + $"|{i, 4}     | {i*i, 4}    | \n";
     }
