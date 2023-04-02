@@ -10,12 +10,9 @@ int number = int.Parse(Console.ReadLine());
 
 if (number < 100 || number >= 1000)
 {
-    Console.WriteLine("Вы ввели не трёхзначное число повторите попытку");
+    Console.WriteLine("Вы ввели не трёхзначное число, повторите попытку");
     return;
 }
-
-Console.WriteLine($"Введённое число {number}");
-
 int SecondDigit = number / 10 % 10;
 
 Console.WriteLine($"Вторая цифра {SecondDigit}");
