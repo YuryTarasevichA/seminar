@@ -15,11 +15,6 @@ else Console.WriteLine($"Введено отрицательное число B!
 double Degree(double numA, double numB)
 {
     double resultDegree = 1;
-    /* while ( i < numB )
-    {
-        resultDegree *= numA;
-        i++; 
-    } */
     for(double i = 1; i <= numB; i++)
     {
         checked
