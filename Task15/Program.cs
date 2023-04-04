@@ -4,10 +4,39 @@
 6 -> да
 7 -> да
 1 -> нет */
-Console.Write("Введите целое число от 1 до 7: ");
-int numberday = Convert.ToInt32(Console.ReadLine());
-if 
-else
+int Prompt (string massage)
 {
-    Console.WriteLine("это НЕ ДЕНЬ НЕДЕЛИ, ВВЕДИ ОТ 1 ДО 7!!!!!");
+    Console.Write(massage);
+    string value = Console.ReadLine();
+    int result = Convert.ToInt32(value);
+    return result;
+}
+bool IsWeekend(int weekDay)
+{
+    if (weekDay > 5)
+    {
+        return true;
+    }
+    return false;
+}
+bool ValidateWeekend(int number)
+{
+    if (number >0 && number <=7)
+    {
+        return true;
+    }
+    Console.WriteLine("Это не день недели!");
+    return false;
+}
+int weekDay = Prompt ("Введите день недели -> ");
+if (ValidateWeekend(weekDay))
+{
+    if (IsWeekend(weekDay))
+    {
+        Console.WriteLine("Наконец-то выходной");
+    }
+    else
+    {
+        Console.WriteLine("Опять работать...");
+    } 
 }

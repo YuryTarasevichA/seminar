@@ -16,15 +16,3 @@ if (number < 100 || number >= 1000)
 int SecondDigit = number / 10 % 10;
 
 Console.WriteLine($"Вторая цифра {SecondDigit}");
-
-/* int randomNumber = new Random().Next(100, 1000);
-int newNumber = SecondDigit(randomNumber);
-Console.WriteLine($"Рандомное трёхзначное число: {randomNumber}");
-Console.WriteLine($"Получена вторая цифра из числа: {newNumber}");
-
-int SecondDigit (int randomNum)
-{
-    int twoDigit = randomNumber % 100;
-    int firtTwoDigit = twoDigit /10;
-    return firtTwoDigit;
-} */
