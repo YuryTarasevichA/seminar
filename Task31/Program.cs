@@ -52,4 +52,4 @@ Console.WriteLine();
 int sumNegativeElem = GetSumNegativeElem(array);
 int sumPositiveElem = GetSumPositiveElem(array);
 Console.WriteLine($"Сумма положительных элементов = {sumPositiveElem}");
-Console.WriteLine($"Сумма положительных элементов = {sumNegativeElem}");
+Console.WriteLine($"Сумма отрицательных элементов = {sumNegativeElem}");
