@@ -47,7 +47,7 @@ int QuantityExistElements(int[] arr)
     return i;
 }
 
-int[] array = CreateArrayRndInt(10, -100, 100);
+int[] array = CreateArrayRndInt(123, -1000, 1000);
 PrintArray(array);
 Console.WriteLine();
 Console.WriteLine($"Количество чисел лежащих в диапазоне от 10 до 99 равно {QuantityExistElements(array)}");
