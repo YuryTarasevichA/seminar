@@ -1,21 +1,25 @@
 ﻿/* Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 1, 33, 6] */
-int [] ArreyBinary (int size)
+int [] ArreyBinary (int size, int min, int max)
 {
-    int [] array = new int[size];
-    Random random = new Random();
+    int[] arr = new int[size];
+    Random rnd = new Random();
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        array[i] = random.Next(0, 1000000);
+        arr[i] = rnd.Next(min, max + 1);
     }
-    return array;
+    return arr;
 }
-void PrintArray(int[] array)
+
+void PrintArray (int[] arr)
 {
-    foreach (var num in array)
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"[{num}] ");
+       if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+       else Console.Write($"{arr[i]}");
     }
+    Console.Write("]");
 }
-PrintArray(ArreyBinary (8)); 
+PrintArray(ArreyBinary (8, 0, 100));
