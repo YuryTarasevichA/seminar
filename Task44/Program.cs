@@ -2,7 +2,7 @@
 Фибоначчи. Первые два числа фибоначчи: 0 и 1. */
 
 Console.WriteLine("Введите число N:");
-int num =  Convert.ToInt32(Console.ReadLine());
+int number =  Convert.ToInt32(Console.ReadLine());
 int [] FibonacciNumbers (int num)
 {
     int[] fiboArray = new int[num];
@@ -25,5 +25,5 @@ void PrintArray (int[] arr)
     Console.Write("]");
 }
 
-PrintArray(FibonacciNumbers(num));
+PrintArray(FibonacciNumbers(number));
 
