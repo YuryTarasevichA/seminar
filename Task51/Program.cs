@@ -41,7 +41,6 @@ int CountTotalSummInDiagonalFast(int[,] matrix)
     {
         totalSumm += matrix[j, j];
     }
-
     return totalSumm;
 }
 int[ , ] createMatrix = CreateMatrixRndInt(4, 3, 0, 10);
