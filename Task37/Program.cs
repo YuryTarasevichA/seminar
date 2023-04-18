@@ -41,25 +41,6 @@ int[] GetWorkElemPar(int[] arr)
         pare[pare.Length - 1] = arr[arr.Length / 2];
     
     return pare;
-    /* 
-    int sum = 0;
-    int sum1 = 0;
-    for (int i = 0; i < arr.Length; i++)
-    {
-        while (i < (arr.Length / 2))
-        {
-            sum = arr[i] * arr[arr.Length - i - 1];
-            i++;
-            Console.WriteLine(sum);
-        }
-    }
-
-    if (arr.Length % 2 != 0)
-    {
-        sum1 = arr[arr.Length / 2];
-        Console.WriteLine(sum1);
-    }
-    return sum; */
 }
 
 int[] array = CreateArrayRndInt(11, -9, 9);
