@@ -51,17 +51,17 @@ void PrintMatrix (double[ , ] matrix)
 }
 double[,] OrderArray(double[,] matrix)
 {
-    for (int j = 0; j < matrix.GetLength(0); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix.GetLength(1) - 1; i++)
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
         {
-            for (int k = i + 1; k < matrix.GetLength(1); k++)
+            for (int k = j + 1; k < matrix.GetLength(1); k++)
             {
-                if (matrix[j, i] < matrix[j, k])
+                if (matrix[i, j] < matrix[i, k])
                 {
-                    double temp = matrix[j, i];
-                    matrix[j, i] = matrix[j, k];
-                    matrix[j, k] = temp;
+                    double max = matrix[i, j];
+                    matrix[i, j] = matrix[i, k];
+                    matrix[i, k] = max;
                 }
             }
         }
@@ -72,9 +72,9 @@ double[,] OrderArray(double[,] matrix)
 /* Данный метод OrderArray принимает двумерный массив matrix 
 содержащий числовые значения. Метод сортирует элементы каждой строки массива по убыванию. 
 
-Первый цикл for проходит по каждой строке массива matrix (переменная j индексирует строки). 
+Первый цикл for проходит по каждой строке массива matrix (переменная i индексирует строки). 
 
-Второй цикл for проходит по каждому элементу строки (переменная i индексирует столбцы), 
+Второй цикл for проходит по каждому элементу строки (переменная j индексирует столбцы), 
 кроме последнего, так как за последним элементом в строке не нужно 
 совершать действий сравнения (при сортировке пузырьком пузырек всегда всплывает 
 до конца, так как гарантированно поменьше элементов не было).
