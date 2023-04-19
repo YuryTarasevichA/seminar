@@ -2,6 +2,18 @@
 которая поменяет местами первую и последнюю строку
 массива. */
 
+Console.WriteLine ("Введите количество строк таблицы");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("Введите количество столбцов таблицы");
+int n = Convert.ToInt32(Console.ReadLine());
+
+double [ , ] resultMatrix = CreateMatrixRndInt (m, n, -10, 10);
+Console.WriteLine("Созданная матрица: ");
+PrintMatrix(resultMatrix);
+EditMatrix(resultMatrix);
+Console.WriteLine("После замены первой и последней строки матрицы: ");
+PrintMatrix(resultMatrix);
+
 double [ , ] CreateMatrixRndInt(int rows, int columns, double min, double max)
 {
     double[ , ] matrix = new double[rows, columns];
@@ -34,12 +46,12 @@ void EditMatrix (double [,] matrix)
 {
     int firstRow = 0;
     int lastRow = matrix.GetLength(0)-1;
-    for (int i = 0; i < matrix.GetLength; i++)
+    for (int i = 0; i < matrix.GetLength(1); i++)
     {
-        int temp = 
+        double temp = matrix [firstRow, i];
+        matrix[firstRow, i] = matrix[lastRow, i];
+        matrix[lastRow, i] = temp;
     }
+}
 
-};
 
-double [ , ] resultMatrix = CreateMatrixRndInt (3, 4, 1, 10);
-PrintMatrix(resultMatrix);
