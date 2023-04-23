@@ -79,22 +79,21 @@ void PrintMatrix (double[ , ] matrix)
 }
 double[,] MultiplyMatrices(double[,] matrix1, double[,] matrix2)
 {
-    int rows1 = matrix1.GetLength(0);
-    int cols1 = matrix1.GetLength(1);
-    int rows2 = matrix2.GetLength(0);
-    int cols2 = matrix2.GetLength(1);
-    double[,] result = new double[rows1, cols2];
+    int rows1 = matrix1.GetLength(0); //строка первой матрицы равна matrix1.GetLength(0)
+    int cols1 = matrix1.GetLength(1); //столбец первой матрицы равна matrix1.GetLength(1)
+    int rows2 = matrix2.GetLength(0); //строка второй матрицы равна matrix2.GetLength(0)
+    int cols2 = matrix2.GetLength(1); //столбец второй матрицы равна matrix2.GetLength(1)
+    double[,] result = new double[rows1, cols2]; // новая матрица будет количеством строк первой и количеством столбцов второй
 
-    for (int i = 0; i < rows1; i++)
+    for (int i = 0; i < rows1; i++) // проходим по всем строкам первой матрицы
     {
-        for (int j = 0; j < cols2; j++)
+        for (int j = 0; j < cols2; j++) // проходим по всем столбцам второй матрицы
         {
-            for (int k = 0; k < cols1; k++)
+            for (int k = 0; k < cols1; k++) // проходим по всем столбцам первой матрицы
             {
-               result[i, j] += matrix1[i, k] * matrix2[k, j];
+               result[i, j] += matrix1[i, k] * matrix2[k, j]; // выполняем правило перемножения элементов двух матриц "a11 · b11 + a12 · b21", где "a11 · b11" будет result[i, j] после прохождения первого круга
             }
         }
     }
-
-    return  result;
+    return result; // возвращаем результат
 }
