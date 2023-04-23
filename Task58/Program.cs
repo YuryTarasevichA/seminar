@@ -30,7 +30,7 @@ double[,] result2Matrix = CreateMatrixRndInt(a, b, minimum, maximum);
 Console.WriteLine("Созданная вторая матрица: ");
 PrintMatrix(result2Matrix);
 if (resultMatrix.GetLength(1) == result2Matrix.GetLength(0) || result2Matrix.GetLength(1) == resultMatrix.GetLength(0))
-{
+{ 
     double[,] multiplyMatrices = MultiplyMatrices(resultMatrix, result2Matrix);
     for (int i = 0; i < multiplyMatrices.GetLength(0); i++)
     {
@@ -45,7 +45,7 @@ if (resultMatrix.GetLength(1) == result2Matrix.GetLength(0) || result2Matrix.Get
 else
 {
     Console.WriteLine("Некорретный ввод матриц, невозможно перемножить матрицы данного размера");
-}
+} 
 
 
 double [ , ] CreateMatrixRndInt(int rows, int columns, double min, double max)
@@ -83,10 +83,6 @@ double[,] MultiplyMatrices(double[,] matrix1, double[,] matrix2)
     int cols1 = matrix1.GetLength(1);
     int rows2 = matrix2.GetLength(0);
     int cols2 = matrix2.GetLength(1);
-
-    if (cols1 != rows2)
-        throw new ArgumentException("Matrices cannot be multiplied.");
-
     double[,] result = new double[rows1, cols2];
 
     for (int i = 0; i < rows1; i++)
