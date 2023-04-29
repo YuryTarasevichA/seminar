@@ -58,12 +58,12 @@ int[,] CreateArrayMatrix(int rows, int colum, int min, int max)
 }
 void PrintMatrix(int[,] array)
 {
-    // Распечатайте полученный спиральный массив
-    for (int r = 0; r < array.GetLength(0); r++)
+    // Распечатать полученный спиральный массив
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int c = 0; c < array.GetLength(1); c++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write("{0:D2} ", array[r, c]);
+            Console.Write("{0:D2} ", array[i, j]);
         }
         Console.WriteLine();
     }
